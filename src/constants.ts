@@ -68,6 +68,47 @@ export const RESUME_DATA: ResumeData = {
     { title: "Operational Efficiency", metric: "35% Improvement", context: "Insurance Claims Management Portal optimization." },
     { title: "Expense Tracking", metric: "30% Accuracy Boost", context: "Smart Finance Management System implementation." }
   ],
+  projects: [
+    {
+      title: "Insurance Claims Management Portal",
+      category: "Enterprise Workflow Platform",
+      summary: "Built a secure claims workflow experience for intake, validation, and case tracking with API-driven services and responsive interfaces.",
+      impact: "35% improvement in operational efficiency",
+      stack: ["Java", "Spring Boot", "React.js", "PostgreSQL", "REST APIs"],
+      imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
+      imageAlt: "Business workflow and analytics desk setup"
+    },
+    {
+      title: "Smart Finance Management System",
+      category: "Finance Tracking Application",
+      summary: "Created an expense management experience with transaction visibility, cleaner reporting flows, and backend logic focused on reliable financial tracking.",
+      impact: "30% boost in expense tracking accuracy",
+      stack: ["Java", "Spring Boot", "React.js", "MySQL", "Chart.js"],
+      imageUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+      imageAlt: "Personal finance and budgeting workspace",
+      liveUrl: "https://finance-management-mauve.vercel.app/"
+    },
+    {
+      title: "The Aroma Web App",
+      category: "Responsive Product Experience",
+      summary: "Designed a polished web experience centered on product discovery, mobile responsiveness, and a smoother customer browsing journey.",
+      impact: "Responsive, conversion-focused frontend delivery",
+      stack: ["TypeScript", "React.js", "Tailwind CSS", "Node.js"],
+      imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+      imageAlt: "Coffee-focused brand presentation and product mood image",
+      liveUrl: "https://the-aroma.vercel.app/"
+    },
+    {
+      title: "Weather App",
+      category: "Forecast Dashboard",
+      summary: "Built a weather experience for quick city search, live condition snapshots, and a clean forecast-first interface that stays easy to read.",
+      impact: "Fast forecast lookup with readable weather insights",
+      stack: ["React.js", "TypeScript", "REST APIs", "CSS3"],
+      imageUrl: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=1200&q=80",
+      imageAlt: "Dramatic sky and weather conditions over a city",
+      liveUrl: "https://weather-app-rho-opal-97.vercel.app/"
+    }
+  ],
   skills: {
     "Programming": ["Java", "TypeScript", "JavaScript", "SQL"],
     "Frontend": ["React.js", "Angular", "HTML5", "CSS3", "Bootstrap", "Tailwind CSS", "Redux", "Chart.js"],
@@ -95,10 +136,5 @@ export const RESUME_DATA: ResumeData = {
     "SAP Certified Associate - Back-End Developer - ABAP Cloud",
     "Hewlett Packard Enterprise - Software Engineering Job Simulation",
     "Deloitte Australia - Data Analytics Job Simulation"
-  ],
-  extra: [
-    "Insurance Claims Management Portal (Project)",
-    "Smart Finance Management System (Project)",
-    "The Aroma Web App (Project)"
   ]
 };

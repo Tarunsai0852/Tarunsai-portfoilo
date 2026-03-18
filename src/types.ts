@@ -18,6 +18,17 @@ export interface Achievement {
   context: string;
 }
 
+export interface Project {
+  title: string;
+  category: string;
+  summary: string;
+  impact: string;
+  stack: string[];
+  imageUrl: string;
+  imageAlt: string;
+  liveUrl?: string;
+}
+
 export interface Education {
   institution: string;
   degree: string;
@@ -34,9 +45,9 @@ export interface ResumeData {
     links: { label: string; url: string }[];
   };
   experience: Experience[];
+  projects: Project[];
   achievements: Achievement[];
   skills: { [key: string]: string[] };
   education: Education[];
   certifications: string[];
-  extra: string[];
 }
