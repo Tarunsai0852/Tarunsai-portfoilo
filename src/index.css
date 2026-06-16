@@ -47,8 +47,8 @@
     background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
-    z-index: 100;
-    opacity: 0.3;
+    z-index: 5;
+    opacity: 0.14;
   }
 
   body::after {
@@ -57,7 +57,8 @@
     inset: 0;
     background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.7) 100%);
     pointer-events: none;
-    z-index: 99;
+    z-index: 4;
+    opacity: 0.55;
   }
 
   ::selection {

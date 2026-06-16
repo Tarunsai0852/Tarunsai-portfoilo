@@ -3,14 +3,14 @@ import { ResumeData } from "./types";
 export const RESUME_DATA: ResumeData = {
   basics: {
     name: "Tarun Sai Madimi",
-    title: "Full Stack Developer | Java | Spring Boot | React | AWS | Microservices",
-    summary: "Full Stack Developer with 3+ years of experience delivering cloud-native web applications across security, finance, and workflow systems. Combines Java/Spring ecosystems with React and modern DevOps practices to build scalable platforms. Improved feature adoption by 18% through usability-driven UI enhancements and reduced production incidents by 31% by strengthening automated tests and monitoring. Experienced in REST API design, distributed messaging, containerized deployments, and secure authentication using OAuth2/JWT. Background spans AWS, Kubernetes, PostgreSQL/MySQL, and performance optimization.",
+    title: "Full Stack Developer | Java | Python | TypeScript | AWS | Azure | Microservices",
+    summary: "Full Stack Developer with 3+ years of experience building scalable web applications, APIs, and event-driven systems using Java, Python, TypeScript, and cloud-native technologies. Delivered platforms supporting 99.9% service availability and processing over 10M+ transaction and event records annually across fintech and cybersecurity environments. Experienced in microservices, distributed systems, real-time data pipelines, cloud infrastructure, and secure application development using AWS, Azure, PostgreSQL, Kafka, and modern frontend frameworks.",
     location: "OH, USA",
-    email: "tarunsai.madimi@gmail.com",
+    email: "madimitarunsai0@gmail.com",
     links: [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/tarun-sai-madimi-378435369/"
+        "url": "https://www.linkedin.com/in/tarunsaimadimi/"
       },
       {
         "label": "GitHub",
@@ -20,104 +20,90 @@ export const RESUME_DATA: ResumeData = {
   },
   experience: [
     {
-      company: "ReliaQuest",
+      company: "Amazon",
       role: "Full Stack Developer",
       dates: "October 2024 - Present",
       location: "OH, USA",
       bullets: [
-        "Architected core backend services using Java and Spring Cloud, with Gradle streamlining build automation and PostgreSQL supporting relational data operations, reducing query latency by 26% and improving overall release efficiency.",
-        "Developed interactive frontend components with React.js, leveraging Redux to stabilize complex state transitions and Bootstrap to ensure responsive layouts, increasing user engagement by 21% across key application workflows.",
-        "Enhanced scalable event-driven workflows through microservices architecture, integrating AWS SQS, Apache Kafka, and Redis for asynchronous messaging, real-time streaming, and low-latency caching, improving system throughput by 33%.",
-        "Directed and documented REST APIs with Swagger, while API Gateway centralized routing, throttling, and monitoring capabilities, reducing API onboarding time by 38% and improving cross-team integration efficiency.",
-        "Strengthened secure authentication and authorization using OAuth2/JWT, with Mockito enabling isolated unit validation and Jira supporting defect tracking and sprint visibility, decreasing security-related defects and strengthening platform reliability.",
-        "Orchestrated testing and deployments via GitHub Actions, orchestrating Kubernetes container workflows and integrating Prometheus monitoring with Playwright UI validation, reducing release cycles by 15% and strengthening deployment stability."
+        "Contributed to RESTful microservices using FastAPI and Celery with async task queues, integrating internal APIs to automate data enrichment workflows and cut manual processing time by 50%.",
+        "Took ownership of a real-time event correlation engine using Python asyncio and Amazon SQS, aggregating multi-source data streams into unified event timelines and reducing duplicate alert noise by 60% for internal operations teams.",
+        "Collaborated with backend teams to expose normalized operational data through a GraphQL API built with Strawberry and SQLAlchemy, deployed behind AWS API Gateway with rate limiting and authentication for multiple internal consumers.",
+        "Drove automation of compliance and reporting workflows using Python scripting integrated with Terraform and AWS Lambda, cutting report turnaround time from 2 days to 4 hours.",
+        "Worked with the observability team to instrument distributed backend services using OpenTelemetry and AWS CloudWatch, contributing to trace-level analysis that resolved latency bottlenecks in production payment workflows.",
+        "Partnered with product and design to rebuild internal operational dashboards in Next.js and TypeScript with live WebSocket data feeds, reducing UI regressions by 35% through improved testing and CI practices."
       ],
       metrics: [
-        { label: "Query Latency", value: "-26%" },
-        { label: "User Engagement", value: "+21%" },
-        { label: "System Throughput", value: "+33%" },
-        { label: "API Onboarding", value: "-38%" },
-        { label: "Release Cycles", value: "-15%" }
+        { label: "Manual Processing", value: "-50%" },
+        { label: "Alert Noise", value: "-60%" },
+        { label: "Report Turnaround", value: "4 hrs" },
+        { label: "UI Regressions", value: "-35%" }
       ]
     },
     {
-      company: "DXC Technology",
+      company: "FIS Global",
       role: "Software Developer",
       dates: "November 2021 - August 2023",
       location: "India",
       bullets: [
-        "Developed modular Java backend components, streamlined Maven builds, optimized MySQL queries, and enforced SonarQube standards, reducing query execution time by 22% through normalization and indexing.",
-        "Created responsive UI modules with React, HTML5, and CSS3, enhancing cross-browser compatibility and accessibility while reducing page load latency by optimizing rendering and minimizing unnecessary DOM updates.",
-        "Implemented single-page application features leveraging Angular, TypeScript, and RxJS, enabling reactive data flows and efficient state management, increasing user interaction responsiveness by 27% across complex UI workflows.",
-        "Collaborated and validated RESTful APIs using Spring Boot, Hibernate, and Postman, streamlining data exchange and ORM mapping validation, accelerating defect identification through early-stage contract and integration testing.",
-        "Established secure authentication and role-based access controls using Spring Security and Data JPA, supported by JUnit testing and GitHub version control, reducing regression issues and improving application resilience by 20%.",
-        "Deployed containerized microservices using Docker, automated CI/CD pipelines with Jenkins, and managed cloud infrastructure on AWS (EC2, S3, Lambda) using Terraform, shortening release cycles by 38% and improving deployment reliability.",
-        "Improved data persistence and UI consistency utilizing NoSQL, Tailwind CSS, and Agile methodologies, improving sprint predictability while enhancing code maintainability and cross-functional development efficiency."
+        "Built a multi-tenant payment reporting framework using Java 17, Hibernate ORM, and PostgreSQL that consolidated client reporting pipelines for banking clients, reducing data processing time by 40% across enterprise accounts.",
+        "Developed a real-time audit trail system using Spring Batch to manage ETL workflows between core banking systems and cloud data warehouses, supporting PCI-DSS compliance for financial institution clients.",
+        "Designed RESTful microservices using Spring WebFlux and R2DBC to handle non-blocking, high-frequency transaction requests, improving service throughput by 45% during peak settlement and reconciliation windows.",
+        "Refactored inter-service communication between payment gateway and reconciliation modules from synchronous REST to event-driven messaging using Kafka, reducing processing latency and improving fault tolerance across transaction workflows.",
+        "Managed cloud infrastructure on Azure AKS using Terraform and Helm charts, enabling automated environment provisioning and zero-downtime deployments for production banking applications.",
+        "Set up CI/CD pipelines using Jenkins and GitHub Actions, integrating automated build, test, and deployment stages that streamlined release cycles and improved team delivery consistency across environments.",
+        "Enforced SonarQube code quality gates across service repositories, achieving 85% test coverage through JUnit and Mockito and reducing production defects by 30% across the team."
       ],
       metrics: [
-        { label: "Query Execution", value: "-22%" },
-        { label: "Interaction Resp.", "value": "+27%" },
-        { label: "App Resilience", "value": "+20%" },
-        { label: "Release Cycles", "value": "-38%" }
+        { label: "Data Processing", value: "-40%" },
+        { label: "Throughput", value: "+45%" },
+        { label: "Test Coverage", value: "85%" },
+        { label: "Production Defects", value: "-30%" }
       ]
     }
   ],
   achievements: [
-    { title: "Feature Adoption", metric: "18% Increase", context: "Improved through usability-driven UI enhancements." },
-    { title: "Production Incidents", metric: "31% Reduction", context: "Achieved by strengthening automated tests and monitoring." },
-    { title: "Operational Efficiency", metric: "35% Improvement", context: "Insurance Claims Management Portal optimization." },
-    { title: "Expense Tracking", metric: "30% Accuracy Boost", context: "Smart Finance Management System implementation." }
+    { title: "Service Availability", metric: "99.9%", context: "Supported reliable cloud-native platforms across fintech and cybersecurity systems." },
+    { title: "Annual Records", metric: "10M+", context: "Processed transaction and event records through distributed services and pipelines." },
+    { title: "Alert Noise", metric: "60% Reduction", context: "Built real-time event correlation workflows for cleaner internal operations." },
+    { title: "Claims Processing", metric: "45% Faster", context: "Improved portal throughput with RBAC, validation workflows, and caching." }
   ],
   projects: [
     {
       title: "Insurance Claims Management Portal",
       category: "Enterprise Workflow Platform",
-      summary: "Built a secure claims workflow experience for intake, validation, and case tracking with API-driven services and responsive interfaces.",
-      impact: "35% improvement in operational efficiency",
-      stack: ["Java", "Spring Boot", "React.js", "PostgreSQL", "REST APIs"],
-      imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
-      imageAlt: "Business workflow and analytics desk setup"
+      summary: "Architected a secure claims management portal with role-based access, automated validation workflows, OWASP-aligned API security, and caching strategies.",
+      impact: "45% reduction in claim processing time",
+      stack: ["Spring Boot", "React", "TypeScript", "React Query", "PostgreSQL", "JWT", "Redis", "Docker", "AWS S3"],
+      imageUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1800&q=90",
+      imageAlt: "Insurance claim paperwork and business documents"
     },
     {
-      title: "Smart Finance Management System",
-      category: "Finance Tracking Application",
-      summary: "Created an expense management experience with transaction visibility, cleaner reporting flows, and backend logic focused on reliable financial tracking.",
-      impact: "30% boost in expense tracking accuracy",
-      stack: ["Java", "Spring Boot", "React.js", "MySQL", "Chart.js"],
-      imageUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
-      imageAlt: "Personal finance and budgeting workspace",
-      liveUrl: "https://finance-management-mauve.vercel.app/"
+      title: "Private Self-Destructing URL Shortener",
+      category: "Secure Sharing Platform",
+      summary: "Modernized a privacy-first URL shortening platform with time-bound automatic link expiration and secure authentication for controlled resource sharing.",
+      impact: "Zero manual cleanup overhead for sensitive links",
+      stack: ["React", "TypeScript", "Express.js", "MongoDB", "OAuth2", "AWS Cognito"],
+      imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1800&q=90",
+      imageAlt: "Cybersecurity lock and secure network visualization"
     },
     {
-      title: "The Aroma Web App",
-      category: "Responsive Product Experience",
-      summary: "Designed a polished web experience centered on product discovery, mobile responsiveness, and a smoother customer browsing journey.",
-      impact: "Responsive, conversion-focused frontend delivery",
-      stack: ["TypeScript", "React.js", "Tailwind CSS", "Node.js"],
-      imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
-      imageAlt: "Coffee-focused brand presentation and product mood image",
-      liveUrl: "https://the-aroma.vercel.app/"
-    },
-    {
-      title: "Weather App",
-      category: "Forecast Dashboard",
-      summary: "Built a weather experience for quick city search, live condition snapshots, and a clean forecast-first interface that stays easy to read.",
-      impact: "Fast forecast lookup with readable weather insights",
-      stack: ["React.js", "TypeScript", "REST APIs", "CSS3"],
-      imageUrl: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=1200&q=80",
-      imageAlt: "Dramatic sky and weather conditions over a city",
-      liveUrl: "https://weather-app-rho-opal-97.vercel.app/"
+      title: "E-Commerce Web App",
+      category: "Commerce Experience",
+      summary: "Delivered a high-performance e-commerce platform featuring product discovery, cart functionality, secure payments, and a seamless multi-device experience.",
+      impact: "40% faster page loads",
+      stack: ["React", "Redux Toolkit", "Node.js", "MongoDB", "Stripe", "Firebase"],
+      imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1800&q=90",
+      imageAlt: "Online commerce checkout and product browsing interface"
     }
   ],
   skills: {
-    "Programming": ["Java", "TypeScript", "JavaScript", "SQL"],
-    "Frontend": ["React.js", "Angular", "HTML5", "CSS3", "Bootstrap", "Tailwind CSS", "Redux", "Chart.js"],
-    "Backend": ["Spring Boot", "Spring Cloud", "Spring Framework (MVC, Security, Data JPA)", "Hibernate", "Node.js"],
-    "APIs & Testing": ["REST APIs", "Swagger", "Postman", "JUnit", "Mockito", "Playwright"],
-    "Databases": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "NoSQL"],
-    "Cloud & Infra": ["AWS (EC2, S3, Lambda)", "Docker", "Kubernetes", "Terraform"],
-    "DevOps": ["Gradle", "Maven", "Jenkins", "GitHub Actions"],
-    "Security & Monitoring": ["AWS SQS", "Apache Kafka", "Prometheus", "OAuth2", "JWT Authentication", "Jira", "GitHub", "Agile", "Microservices Architecture", "Event-Driven Architecture"]
+    "Programming": ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
+    "Backend & APIs": ["FastAPI", "Celery", "Spring Boot", "Spring WebFlux", "Spring Batch", "Express.js", "Node.js", "Hibernate ORM", "SQLAlchemy", "R2DBC", "Apache Camel", "GraphQL", "RESTful APIs", "gRPC"],
+    "Frontend": ["React", "Next.js", "Redux Toolkit", "React Query", "WebSockets", "Server-Side Rendering"],
+    "Data & ML": ["Apache Kafka", "Apache Spark", "scikit-learn", "ETL Pipelines", "Real-Time Streaming"],
+    "Databases & Cloud": ["PostgreSQL", "MongoDB", "Redis", "AWS Lambda", "API Gateway", "AWS SQS", "AWS S3", "CloudWatch", "Azure AKS"],
+    "DevOps & Quality": ["Terraform", "Docker", "Helm", "Jenkins", "GitHub Actions", "OpenTelemetry", "Grafana Tempo", "ELK Stack", "JUnit", "Mockito", "SonarQube", "ESLint"],
+    "Security & Architecture": ["AWS Cognito", "JWT Authentication", "OAuth2", "RBAC", "OWASP Security Practices", "VirusTotal API", "MISP API", "SIEM", "Threat Intelligence", "Microservices", "Multi-Tenant Systems"]
   },
   education: [
     {

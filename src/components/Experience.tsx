@@ -113,12 +113,9 @@ const Experience: React.FC = () => {
                     <div className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border transition-all duration-500 overflow-hidden ${
                       expandedIndex === idx ? 'border-primary/40 bg-primary/20' : 'border-white/10 bg-white/5'
                     }`}>
-                      <img 
-                        src={exp.company === "ReliaQuest" ? "input_file_0.png" : "input_file_1.png"} 
-                        alt={exp.company}
-                        className={`h-10 w-10 object-contain ${expandedIndex === idx ? 'brightness-125' : 'opacity-50 grayscale'}`}
-                        referrerPolicy="no-referrer"
-                      />
+                      <span className={`text-xl font-black italic tracking-tighter ${expandedIndex === idx ? 'text-primary' : 'text-white/40'}`}>
+                        {exp.company.split(' ').map((word) => word[0]).join('').slice(0, 2)}
+                      </span>
                     </div>
                     
                     <div>
@@ -129,7 +126,7 @@ const Experience: React.FC = () => {
                           idx === 1 ? 'bg-purple-500/10 text-purple-500 border-purple-500/20' : 
                           'bg-blue-500/10 text-blue-500 border-blue-500/20'
                         }`}>
-                          {idx === 0 ? 'MASTERS IT' : idx === 1 ? 'B.TECH EEE' : 'RARE'}
+                          {idx === 0 ? 'CURRENT' : idx === 1 ? 'FINTECH' : 'ARCHIVE'}
                         </div>
                       </div>
                       <p className="text-lg font-bold text-white/40 tracking-tight">{exp.company}</p>

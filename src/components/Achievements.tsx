@@ -5,9 +5,9 @@ import { Star, Zap, ShieldCheck, Activity, Rocket, Cloud, Globe, Target, Award }
 
 const Achievements: React.FC = () => {
   const topImpact = [
-    { label: "API Stability", value: "31%", icon: <Zap size={20} />, color: "text-amber-400" },
-    { label: "Deployment Failures", value: "-24%", icon: <ShieldCheck size={20} />, color: "text-emerald-400" },
-    { label: "Release Cycles", value: "-38%", icon: <Star size={20} />, color: "text-purple-400" },
+    { label: "Service Availability", value: "99.9%", icon: <Zap size={20} />, color: "text-amber-400" },
+    { label: "Event Records", value: "10M+", icon: <ShieldCheck size={20} />, color: "text-emerald-400" },
+    { label: "Service Throughput", value: "+45%", icon: <Star size={20} />, color: "text-purple-400" },
   ];
 
   return (

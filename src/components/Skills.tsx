@@ -1,72 +1,132 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { RESUME_DATA } from '../constants';
 import { Cpu, Layout, Server, Cloud, Database, ShieldCheck, Terminal, Code2 } from 'lucide-react';
-
-const iconMap: Record<string, string> = {
-  // Frontend
-  "React.js": "react",
-  "Angular": "angular",
-  "Redux": "redux",
-  "RxJS": "reactivex",
-  "TypeScript": "typescript",
-  "HTML5": "html5",
-  "CSS3": "css3",
-  "Tailwind CSS": "tailwindcss",
-  "Bootstrap": "bootstrap",
-  "Chart.js": "chartdotjs",
-  // Backend
-  "Java": "openjdk",
-  "Spring Boot": "springboot",
-  "Spring Cloud": "spring",
-  "Microservices": "node-dot-js",
-  "Hibernate": "hibernate",
-  "Data JPA": "spring",
-  "Spring Security": "springsecurity",
-  "SAP ABAP": "sap",
-  "RESTful APIs": "insomnia",
-  "Swagger": "swagger",
-  // Cloud & DevOps
-  "AWS (EC2, S3, Lambda, SQS)": "amazonaws",
-  "Docker": "docker",
-  "Kubernetes": "kubernetes",
-  "Terraform": "terraform",
-  "Jenkins": "jenkins",
-  "GitHub Actions": "githubactions",
-  "Prometheus": "prometheus",
-  "Maven": "apachemaven",
-  "Gradle": "gradle",
-  // Data & Messaging
-  "PostgreSQL": "postgresql",
-  "MySQL": "mysql",
-  "NoSQL": "mongodb",
-  "Redis": "redis",
-  "Apache Kafka": "apachekafka",
-  // Testing & Tools
-  "JUnit": "junit5",
-  "Mockito": "testinglibrary",
-  "Playwright": "playwright",
-  "Postman": "postman",
-  "SonarQube": "sonarqube",
-  "Jira": "jira",
-  "Agile": "atlassian"
-};
+import type { IconType } from 'react-icons';
+import {
+  SiApache,
+  SiApachekafka,
+  SiApachespark,
+  SiCelery,
+  SiDocker,
+  SiEslint,
+  SiExpress,
+  SiFastapi,
+  SiFirebase,
+  SiGithubactions,
+  SiGrafana,
+  SiGraphql,
+  SiHelm,
+  SiHibernate,
+  SiJavascript,
+  SiJenkins,
+  SiJunit5,
+  SiMongodb,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiOpentelemetry,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiReactquery,
+  SiRedis,
+  SiRedux,
+  SiScikitlearn,
+  SiSonarqubecloud,
+  SiSpring,
+  SiSpringboot,
+  SiStripe,
+  SiTerraform,
+  SiTypescript,
+  SiSocket,
+} from 'react-icons/si';
+import { FaAws, FaDatabase, FaJava, FaMicrosoft, FaShieldAlt } from 'react-icons/fa';
+import { TbApi, TbBrandOauth, TbCloudComputing, TbFileAnalytics } from 'react-icons/tb';
+import { MdOutlineSecurity, MdOutlineStream } from 'react-icons/md';
 
 const categoryIcons: Record<string, any> = {
+  "Programming": <Terminal size={24} />,
+  "Backend & APIs": <Server size={24} />,
   "Frontend": <Layout size={24} />,
-  "Backend": <Server size={24} />,
-  "Cloud & DevOps": <Cloud size={24} />,
-  "Data & Messaging": <Database size={24} />,
-  "Testing & Tools": <ShieldCheck size={24} />
+  "Data & ML": <Database size={24} />,
+  "Databases & Cloud": <Cloud size={24} />,
+  "DevOps & Quality": <ShieldCheck size={24} />,
+  "Security & Architecture": <Cpu size={24} />
+};
+
+const skillIcons: Record<string, IconType> = {
+  "Java": FaJava,
+  "Python": SiPython,
+  "JavaScript": SiJavascript,
+  "TypeScript": SiTypescript,
+  "SQL": FaDatabase,
+  "FastAPI": SiFastapi,
+  "Celery": SiCelery,
+  "Spring Boot": SiSpringboot,
+  "Spring WebFlux": SiSpring,
+  "Spring Batch": SiSpring,
+  "Express.js": SiExpress,
+  "Node.js": SiNodedotjs,
+  "Hibernate ORM": SiHibernate,
+  "SQLAlchemy": FaDatabase,
+  "R2DBC": FaDatabase,
+  "Apache Camel": SiApache,
+  "GraphQL": SiGraphql,
+  "RESTful APIs": TbApi,
+  "gRPC": TbApi,
+  "React": SiReact,
+  "Next.js": SiNextdotjs,
+  "Redux Toolkit": SiRedux,
+  "React Query": SiReactquery,
+  "WebSockets": SiSocket,
+  "Server-Side Rendering": SiNextdotjs,
+  "Apache Kafka": SiApachekafka,
+  "Apache Spark": SiApachespark,
+  "scikit-learn": SiScikitlearn,
+  "ETL Pipelines": TbFileAnalytics,
+  "Real-Time Streaming": MdOutlineStream,
+  "PostgreSQL": SiPostgresql,
+  "MongoDB": SiMongodb,
+  "Redis": SiRedis,
+  "AWS Lambda": FaAws,
+  "API Gateway": FaAws,
+  "AWS SQS": FaAws,
+  "AWS S3": FaAws,
+  "CloudWatch": FaAws,
+  "Azure AKS": FaMicrosoft,
+  "Terraform": SiTerraform,
+  "Docker": SiDocker,
+  "Helm": SiHelm,
+  "Jenkins": SiJenkins,
+  "GitHub Actions": SiGithubactions,
+  "OpenTelemetry": SiOpentelemetry,
+  "Grafana Tempo": SiGrafana,
+  "ELK Stack": FaDatabase,
+  "JUnit": SiJunit5,
+  "Mockito": Code2,
+  "SonarQube": SiSonarqubecloud,
+  "ESLint": SiEslint,
+  "AWS Cognito": FaAws,
+  "JWT Authentication": MdOutlineSecurity,
+  "OAuth2": TbBrandOauth,
+  "RBAC": FaShieldAlt,
+  "OWASP Security Practices": MdOutlineSecurity,
+  "VirusTotal API": MdOutlineSecurity,
+  "MISP API": MdOutlineSecurity,
+  "SIEM": MdOutlineSecurity,
+  "Threat Intelligence": MdOutlineSecurity,
+  "Microservices": TbCloudComputing,
+  "Multi-Tenant Systems": TbCloudComputing,
+  "Stripe": SiStripe,
+  "Firebase": SiFirebase,
 };
 
 interface SkillIconProps {
   skill: string;
-  slug: string;
 }
 
-const SkillIcon: React.FC<SkillIconProps> = ({ skill, slug }) => {
-  const [error, setError] = useState(false);
+const SkillIcon: React.FC<SkillIconProps> = ({ skill }) => {
+  const Icon = skillIcons[skill] || Code2;
 
   return (
     <motion.div
@@ -76,18 +136,10 @@ const SkillIcon: React.FC<SkillIconProps> = ({ skill, slug }) => {
       <div className="relative flex h-16 w-16 items-center justify-center rounded-xl border border-white/5 bg-white/5 p-3 transition-all duration-300 hover:border-primary/30 hover:bg-white/10 hover:shadow-[0_10px_20px_rgba(0,0,0,0.3)]">
         {/* 3D Effect Layers */}
         <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover/skill:opacity-100 transition-opacity" />
-        
-        {!error ? (
-          <img 
-            src={`https://cdn.simpleicons.org/${slug}/ffffff`}
-            alt={skill}
-            className="h-8 w-8 object-contain transition-all duration-300 group-hover/skill:scale-110 group-hover/skill:brightness-125"
-            referrerPolicy="no-referrer"
-            onError={() => setError(true)}
-          />
-        ) : (
-          <Code2 size={32} className="text-primary/60 group-hover/skill:text-primary transition-colors" />
-        )}
+
+        <div className="text-primary/70 transition-all duration-300 group-hover/skill:scale-110 group-hover/skill:text-primary">
+          <Icon size={34} />
+        </div>
         
         {/* Glow on hover */}
         <div className="absolute inset-0 -z-10 rounded-xl bg-primary/20 opacity-0 blur-md transition-opacity group-hover/skill:opacity-100" />
@@ -173,8 +225,7 @@ const Skills: React.FC = () => {
                 {skills.map((skill) => (
                   <SkillIcon 
                     key={skill} 
-                    skill={skill} 
-                    slug={iconMap[skill] || "code"} 
+                    skill={skill}
                   />
                 ))}
               </div>
