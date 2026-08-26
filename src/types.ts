@@ -42,6 +42,9 @@ export interface ResumeData {
     summary: string;
     location: string;
     email: string;
+    phone: string;
+    workAuthorization: string;
+    availability: string;
     links: { label: string; url: string }[];
   };
   experience: Experience[];

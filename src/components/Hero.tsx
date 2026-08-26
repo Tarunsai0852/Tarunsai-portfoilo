@@ -96,7 +96,7 @@ const Hero: React.FC = () => {
           <span>{lastName}</span>
         </h1>
         <p data-video-hero className={styles.videoRole}>
-          Full-Stack Developer - Cloud Systems - Software Engineering
+          {RESUME_DATA.basics.title}
         </p>
       </div>
 
