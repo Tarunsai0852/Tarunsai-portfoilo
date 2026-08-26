@@ -7,6 +7,7 @@ import SmoothScroll from './components/SmoothScroll';
 import CursorDot from './components/CursorDot';
 import {
   CinematicAbout,
+  CinematicCertifications,
   CinematicEducation,
   CinematicExperience,
   CinematicFooter,
@@ -39,6 +40,7 @@ export default function App() {
               <CinematicExperience />
               <CinematicSkills />
               <CinematicEducation />
+              <CinematicCertifications />
               <CinematicFooter />
             </motion.main>
           </SmoothScroll>

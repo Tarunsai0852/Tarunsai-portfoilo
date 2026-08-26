@@ -72,10 +72,10 @@ const Experience: React.FC = () => {
             Experi<span className="text-primary">ence</span>
           </h2>
           <p className="mx-auto max-w-xl text-lg font-bold text-primary uppercase tracking-widest italic">
-            Senior UX Designer - Analytical Dashboards
+            3 Years Experience Java Full Stack Developer
           </p>
           <p className="mx-auto mt-4 max-w-xl text-sm font-medium text-white/40">
-            A chronological record of dashboard design, data visualization, and enterprise workflow work.
+            A chronological record of high-stakes missions and technical conquests.
           </p>
         </div>
 

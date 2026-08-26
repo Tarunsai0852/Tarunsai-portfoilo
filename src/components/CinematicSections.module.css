@@ -115,14 +115,6 @@
   background: rgba(255, 255, 255, 0.34);
 }
 
-.orangeSummary {
-  max-width: 620px;
-  margin: 28px 0 0;
-  color: rgba(20, 17, 17, 0.78);
-  font-size: 15px;
-  line-height: 1.65;
-}
-
 .orangeCta {
   display: inline-flex;
   align-items: center;

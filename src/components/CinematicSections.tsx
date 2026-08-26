@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { ArrowUpRight, Linkedin, Mail, MapPin } from 'lucide-react';
+import { ArrowUpRight, Award, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { RESUME_DATA } from '../constants';
 import styles from './CinematicSections.module.css';
 
@@ -47,7 +47,7 @@ export const CinematicAbout: React.FC = () => {
   return (
     <section id="about" ref={sectionRef} className={`${styles.section} ${styles.orangeSection}`}>
       <div className={styles.orangeNav}>
-        <span>{RESUME_DATA.basics.location}</span>
+        <span>OH, USA</span>
         <nav>
           <a href="#">Home</a>
           <a href="#about">About</a>
@@ -68,7 +68,7 @@ export const CinematicAbout: React.FC = () => {
         <div className={styles.orangeContent}>
           <div data-cinema-reveal className={styles.orangeGreeting}>
             <span>Hi, I'm</span>
-            <strong>Senior UX Designer</strong>
+            <strong>Full Stack Developer</strong>
           </div>
 
           <h2 data-cinema-reveal className={styles.orangeName}>
@@ -77,14 +77,10 @@ export const CinematicAbout: React.FC = () => {
           </h2>
 
           <div data-cinema-reveal className={styles.orangePills}>
-            {['Analytical Dashboards', 'Data Visualization', 'Design Systems', 'Enterprise UX'].map((pill) => (
+            {['Cloud Native', 'Full Stack Engineer', 'Fintech Systems', 'React + Python'].map((pill) => (
               <span key={pill}>{pill}</span>
             ))}
           </div>
-
-          <p data-cinema-reveal className={styles.orangeSummary}>
-            {RESUME_DATA.basics.summary}
-          </p>
 
           <a data-cinema-reveal className={styles.orangeCta} href="#projects">
             View Projects <ArrowUpRight size={16} />
@@ -102,12 +98,12 @@ export const CinematicAbout: React.FC = () => {
 
         <div data-cinema-reveal className={styles.orangeCards}>
           <div className={styles.orangeNote}>
-            <strong>Designing clear, data-heavy experiences for complex enterprise workflows.</strong>
-            <span>{RESUME_DATA.basics.workAuthorization} · {RESUME_DATA.basics.availability}</span>
+            <strong>Building scalable digital systems with modern web technologies and cloud infrastructure.</strong>
+            <span>Available for full-time software engineering opportunities.</span>
           </div>
           <div className={styles.orangeNote}>
-            <strong>{RESUME_DATA.basics.availability}</strong>
-            <span>{RESUME_DATA.basics.phone} · Based in {RESUME_DATA.basics.location}</span>
+            <strong>Available for work</strong>
+            <span>Based in {RESUME_DATA.basics.location}</span>
           </div>
         </div>
 
@@ -149,7 +145,7 @@ export const CinematicExperience: React.FC = () => {
             <h2 data-cinema-reveal className={styles.title}>Professional Timeline</h2>
           </div>
           <p data-cinema-reveal className={`${styles.muted} max-w-sm text-sm leading-relaxed`}>
-            UX design for complex analytical dashboards and enterprise workflows across finance, security, operations, and e-commerce.
+            Enterprise engineering across real-time operations, financial systems, cloud infrastructure, and secure distributed services.
           </p>
         </div>
 
@@ -165,7 +161,7 @@ export const CinematicExperience: React.FC = () => {
               <h3 className={styles.company}>{exp.company}</h3>
               <p className={styles.role}>{exp.role}</p>
               <ul className={styles.bullets}>
-                {exp.bullets.map((bullet) => (
+                {exp.bullets.slice(0, 5).map((bullet) => (
                   <li key={bullet} className={styles.bullet}>{bullet}</li>
                 ))}
               </ul>
@@ -194,7 +190,7 @@ export const CinematicProjects: React.FC = () => {
             <h2 data-cinema-reveal className={styles.title}>Build Archive</h2>
           </div>
           <p data-cinema-reveal className={`${styles.muted} max-w-sm text-sm leading-relaxed`}>
-            Selected dashboard work spanning fraud analytics, investigation workflows, and e-commerce fulfillment operations.
+            Cinematic project slides inspired by premium portfolio storytelling, adapted around your actual resume projects.
           </p>
         </div>
 
@@ -241,7 +237,7 @@ export const CinematicSkills: React.FC = () => {
             <h2 data-cinema-reveal className={styles.title}>Engineering Arsenal</h2>
           </div>
           <p data-cinema-reveal className={`${styles.muted} max-w-sm text-sm leading-relaxed`}>
-            A UX toolkit for information architecture, interaction design, visualization, research, and scalable design systems.
+            A modern cloud, data, frontend, backend, and security toolkit shaped by real production systems.
           </p>
         </div>
 
@@ -282,6 +278,31 @@ export const CinematicEducation: React.FC = () => {
   );
 };
 
+export const CinematicCertifications: React.FC = () => {
+  const sectionRef = useReveal();
+
+  return (
+    <section id="certifications" ref={sectionRef} className={styles.section}>
+      <div className={styles.inner}>
+        <span data-cinema-reveal className={styles.kicker}>Certifications</span>
+        <h2 data-cinema-reveal className={styles.title}>Verified Learning</h2>
+
+        <div className={styles.certGrid}>
+          {RESUME_DATA.certifications.map((certification, index) => (
+            <article data-cinema-reveal key={certification} className={styles.certCard}>
+              <div className={styles.certIcon}>
+                <Award size={28} />
+              </div>
+              <span className={styles.cardEyebrow}>Credential 0{index + 1}</span>
+              <h3>{certification}</h3>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export const CinematicFooter: React.FC = () => {
   const sectionRef = useReveal();
   const [first, ...rest] = RESUME_DATA.basics.name.split(' ');
@@ -297,15 +318,12 @@ export const CinematicFooter: React.FC = () => {
 
         <div data-cinema-reveal className={styles.footerGrid}>
           <p className={`${styles.muted} max-w-xl text-base leading-relaxed`}>
-            Open to senior UX design opportunities focused on analytical dashboards, data visualization, enterprise workflows, and thoughtful design systems.
+            Open to full-stack roles, cloud-native engineering work, and product teams building reliable, high-impact software.
           </p>
           <div className={styles.contactLinks}>
             <a className={styles.chip} href={`mailto:${RESUME_DATA.basics.email}`}><Mail size={14} /> Email</a>
-            {RESUME_DATA.basics.links.map((link) => (
-              <a key={link.label} className={styles.chip} href={link.url} target="_blank" rel="noopener noreferrer">
-                {link.label.toLowerCase().includes('linkedin') ? <Linkedin size={14} /> : null} {link.label}
-              </a>
-            ))}
+            <a className={styles.chip} href="https://github.com/Tarunsai0852" target="_blank" rel="noopener noreferrer"><Github size={14} /> GitHub</a>
+            <a className={styles.chip} href="https://www.linkedin.com/in/tarunsaimadimi/" target="_blank" rel="noopener noreferrer"><Linkedin size={14} /> LinkedIn</a>
           </div>
         </div>
       </div>

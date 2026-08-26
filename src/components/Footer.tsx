@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 Let's <span className="text-primary">Connect</span>
               </h2>
               <p className="max-w-md text-sm font-medium text-white/40 leading-relaxed">
-                Open to discussing analytical dashboard projects, enterprise UX opportunities, or thoughtful approaches to data-heavy product design.
+                Open to discussing new projects, high-stakes opportunities, or just sharing architectural insights about full-stack engineering.
               </p>
             </motion.div>
             
